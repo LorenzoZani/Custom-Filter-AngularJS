@@ -1,0 +1,29 @@
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+  </div>
+  <select
+    class="custom-select"
+    id="inputGroupSelect01"
+    ng-model="filter"
+    ng-options="option.key for option in options track by option.value"
+  >
+    <!-- <option ng-repeat="option in options" value="{{ option.value }}">{{
+      option.key
+    }}</option> -->
+  </select>
+  <input type="search" ng-model="query" placeholder="Search here: " />
+</div>
+
+<div class="card" ng-repeat="person in people| filter: getFilter()">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ person.name }} {{ person.lastName }}</h5>
+    <p class="card-text">
+      {{ person.role }}
+    </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>

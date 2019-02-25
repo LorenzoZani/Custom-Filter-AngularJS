@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      data-require="angular.js@1.5.x"
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js"
+      data-semver="1.5.11"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular-resource.min.js"></script>
+
+    <script
+      data-require="angular.js@1.5.x"
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular-route.min.js"
+      data-semver="1.5.11"
+    ></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div ng-controller="MainCtrl as ctrl">
+      <filter search="search" filter="filter" query="query"></filter>
+      <card search="search" filter="filter" query="query"></card>
+    </div>
+  </body>
+</html>
