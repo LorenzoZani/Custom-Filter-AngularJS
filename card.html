@@ -8,10 +8,8 @@
     ng-model="filter"
     ng-options="option.key for option in options track by option.value"
   >
-    <!-- <option ng-repeat="option in options" value="{{ option.value }}">{{
-      option.key
-    }}</option> -->
   </select>
+
   <input type="search" ng-model="query" placeholder="Search here: " />
 </div>
 

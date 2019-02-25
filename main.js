@@ -76,16 +76,3 @@ app.component("card", {
   },
   controller: "MainCtrl"
 });
-
-app.component("filter", {
-  replace: "AECM",
-  templateUrl: "filter.html",
-  bindings: {
-    people: "@",
-    query: "=",
-    options: "=",
-    filter: "=",
-    getFilter: "&"
-  },
-  controller: "MainCtrl"
-});
