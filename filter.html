@@ -1,0 +1,13 @@
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+  </div>
+  <select
+    class="custom-select"
+    id="inputGroupSelect01"
+    ng-model="$ctrl.filter"
+    ng-options="option.key for option in $ctrl.options track by option.value"
+  >
+  </select>
+  <input type="search" ng-model="$ctrl.query" placeholder="Search here: " />
+</div>

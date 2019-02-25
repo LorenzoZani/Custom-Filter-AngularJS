@@ -28,7 +28,20 @@
   </head>
   <body>
     <div ng-controller="MainCtrl as ctrl">
-      <card search="search" filter="filter" query="query"></card>
+      <filter
+        options="options"
+        search="search"
+        filter="filter"
+        query="query"
+      ></filter>
+      <card
+        options="options"
+        data="person"
+        search="search"
+        filter="filter"
+        query="query"
+        ng-repeat="person in people| filter:getFilter()"
+      ></card>
     </div>
   </body>
 </html>

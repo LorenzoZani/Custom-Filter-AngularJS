@@ -19,17 +19,12 @@ app.controller("MainCtrl", [
         key: "Role"
       }
     ];
-
     $scope.filter = $scope.options[0];
-
+    this.filter = $scope.options[0];
     $scope.getFilter = function() {
       var filter = {};
-      console.log($scope.filter.value);
-
-      console.log(filter);
 
       filter[$scope.filter.value] = $scope.query;
-      console.log(filter);
 
       return filter;
     };
@@ -68,11 +63,26 @@ app.component("card", {
   replace: "AECM",
   templateUrl: "card.html",
   bindings: {
-    people: "@",
-    query: "<",
-    options: "<",
-    filter: "<",
+    data: "=",
+    query: "=",
+    options: "=",
+    filter: "=",
     getFilter: "&"
   },
-  controller: "MainCtrl"
+  controller: function() {}
+});
+
+app.component("filter", {
+  replace: "AECM",
+  templateUrl: "filter.html",
+  bindings: {
+    data: "=",
+    query: "=",
+    options: "=",
+    filter: "=",
+    getFilter: "&"
+  },
+  controller: function($scope) {
+    var self = this;
+  }
 });
